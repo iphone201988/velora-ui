@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Velora</title>
+</head>
+<body>
+    <section class="h-[100vh] p-[12px] max-md:min-h-[100vh]">
+        <div class="flex gap-[50px] h-full max-xl:gap-[20px] max-md:flex-col">
+            <div class="bg-image h-full w-[60%] rounded-[6px] max-xl:w-[50%] max-md:w-full max-md:py-[20px]">
+                <div class=" flex flex-col w-full h-full justify-center items-center ">
+                    <img src="assets/login-logo.png" class=" max-xl:max-w-[200px] max-lg:max-w-[140px]" alt="">
+                    <h1 class="golos-font text-[76px] text-white font-semibold mt-[30px] leading-normal max-xl:text-[52px] max-lg:text-[32px] max-lg:mt-[10px]">VELORA</h1>
+                    <h4 class="golos-font text-[36px] text-white font-medium max-xl:text-[24px] max-lg:text-[16px]">YOUR FUTURE, SIMPLFIED BY AI</h4>
+                </div>
+            </div>
+            <div class="w-[40%] max-xl:w-[50%] max-md:w-full">
+                <div class=" max-w-[500px] p-[5px] h-full flex flex-col justify-center max-md:mx-auto">
+                    <h1 class="mt-auto mb-[22px] text-center text-[36px] text-[#081420] font-semibold">Login</h1>
+                <!-- login with  -->
+                <div class="flex gap-[16px] max-sm:flex-col">
+                    <button class="w-full bg-[#F3F4F8] text-[#898989] flex rounded-[12px] p-[8px] items-center justify-center gap-[16px] cursor-pointer">Login with Google <img src="assets/google-icon.svg" alt=""></button>
+                    <button class="w-full bg-[#F3F4F8] text-[#898989] flex rounded-[12px] p-[8px] items-center justify-center gap-[16px] cursor-pointer">Login with Facebook <img src="assets/facebook-cion.svg" alt=""></button>
+                </div>
+                <!-- or -->
+                <div class=" py-[22px]">
+                    <span class="block w-[100%] h-[1px] bg-[#E3E3E3]"></span>
+                    <p class="text-[#B3B3B3] text-[14px] text-center mt-[-12px] bg-white px-[12px] w-max mx-auto">or</p>
+                </div>
+                <!-- inputs -->
+                 <div class="flex flex-col gap-[22px]">
+                    <label class="text-[14px] text-[#898989] flex flex-col gap-[4px]" for="">
+                        Email Address
+                        <input type="email"  class="w-full bg-[#F3F4F8] text-[#000] rounded-[12px] p-[10px] items-center justify-center gap-[16px]">
+                    </label>
+                    <label class="text-[14px] text-[#898989] flex flex-col gap-[4px]" for="">
+                        Password
+                        <input type="password"  class="w-full bg-[#F3F4F8] text-[#000] rounded-[12px] p-[10px] items-center justify-center gap-[16px]">
+                    </label>
+                    <label class="flex items-center gap-[8px] text-[#898989]" for="">
+                        <input type="checkbox" class="w-[16px] h-[16px]" name="" id="">
+                        Remember this device
+                    </label>
+                    <button class="btn-pri">Login</button>
+                    <p class="text-[12px] text-[#898989] text-center">Don’t have an account <a href="signup.html" class="text-[#64EEFC] underline ">Signup</a></p>
+                </div>
+                <!-- privacy     -->
+                <p class="text-[12px] text-[#898989] text-center mt-auto max-md:mt-[22px]">By logging in, you agree to follow our <a href="#" class="text-[#64EEFC] underline ">terms of service</a></p>
+                
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
