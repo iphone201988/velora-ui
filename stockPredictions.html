@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Velora</title>
+  </head>
+
+  <body>
+    <section class="h-[100vh] max-md:min-h-[100vh]">
+      <!-- Sidebar  -->
+      <aside
+        class="sidebar w-full max-w-[300px] p-[24px] border-r border-r-[#E5E5E5] fixed left-0 top-0 z-[999] h-full bg-[#F6F7F9] max-xl:p-[16px] max-xl:max-w-[260px] max-lg:hidden"
+      >
+        <div class="pb-[54px]">
+          <a href=""><img src="assets/logo.png" alt="" /></a>
+        </div>
+        <ul class="flex flex-col gap-[12px] h-[calc(100%-100px)]">
+          <li class="rounded-[16px]">
+            <a
+              class="flex items-center gap-[8px] font-medium text-[#081420] p-[14px]"
+              href="dashboard.html"
+              ><img src="assets/Home-icon.svg" alt="" />Home</a
+            >
+          </li>
+          <li class="rounded-[16px] bg-white">
+            <a
+              class="flex items-center gap-[8px] font-medium text-[#081420] p-[14px]"
+              href=""
+              ><img src="assets/stock-icon.svg" alt="" />Stock Predictions</a
+            >
+          </li>
+          <li class="rounded-[16px]">
+            <a
+              class="flex items-center gap-[8px] font-medium text-[#081420] p-[14px]"
+              href=""
+              ><img src="assets/portfolio-icon.svg" alt="" />Portfolio</a
+            >
+          </li>
+          <li class="rounded-[16px]">
+            <a
+              class="flex items-center gap-[8px] font-medium text-[#081420] p-[14px]"
+              href=""
+              ><img src="assets/sentiment-icon.svg" alt="" />Sentiment</a
+            >
+          </li>
+          <li class="rounded-[16px]">
+            <a
+              class="flex items-center gap-[8px] font-medium text-[#081420] p-[14px]"
+              href=""
+              ><img src="assets/notification-icon.svg" alt="" />Notifications</a
+            >
+          </li>
+          <li class="rounded-[16px]">
+            <a
+              class="flex items-center gap-[8px] font-medium text-[#081420] p-[14px]"
+              href=""
+              ><img src="assets/setting-icon.svg" alt="" />Settings</a
+            >
+          </li>
+          <li class="rounded-[16px] mt-auto">
+            <a
+              class="flex items-center gap-[8px] font-medium text-[#081420] p-[14px]"
+              href=""
+              ><img src="assets/logout-icon.svg" alt="" />Logout</a
+            >
+          </li>
+        </ul>
+      </aside>
+      <!-- Sidebar  -->
+
+      <!-- header -->
+      <header
+        class="border-b border-b-[#E5E5E5] flex justify-end p-[20px] w-[calc(100%-300px)] ml-auto max-xl:w-[calc(100%-260px)] max-lg:w-full"
+      >
+        <div class="search relative max-w-[300px] w-full">
+          <input
+            class="bg-[#EEEEEE] px-[20px] py-[12px] pr-[40px] rounded-[12px] w-full"
+            type="text"
+            placeholder="Search here..."
+          />
+          <button class="absolute right-[12px] top-[12px] cursor-pointer">
+            <img src="assets/search-icon.svg" alt="" />
+          </button>
+        </div>
+        <div class="user ml-[20px]">
+          <a href="">
+            <img src="assets/user-icon.png" alt="" />
+          </a>
+        </div>
+      </header>
+      <!-- header -->
+
+      <!-- main -->
+      <main
+        class="w-[calc(100%-300px)] ml-auto p-[20px] max-xl:w-[calc(100%-260px)] max-lg:w-full"
+      >
+        <div class="max-w-[1080px]">
+          <div class="">
+            <h2 class="text-[24px] font-medium text-[#081420]">Stocks</h2>
+          </div>
+          <div class="flex gap-[20px] mt-[24px]">
+            <div class="search relative max-w-[540px] w-full">
+              <input
+                class="bg-[#ffffff] border border-[#D9D9D9] px-[20px] py-[12px] pr-[40px] rounded-[12px] w-full"
+                type="text"
+                placeholder="Search ticker or company"
+              />
+              <button class="absolute right-[12px] top-[12px] cursor-pointer">
+                <img src="assets/search-icon.svg" alt="" />
+              </button>
+            </div>
+            <select
+              class="bg-[#ffffff] max-w-[260px] border border-[#D9D9D9] px-[20px] py-[12px] pr-[40px] rounded-[12px] w-full"
+              name=""
+              id=""
+            >
+              <option value="">dropdown</option>
+              <option value="">2</option>
+              <option value="">3</option>
+            </select>
+            <select
+              class="bg-[#ffffff] max-w-[260px] border border-[#D9D9D9] px-[20px] py-[12px] pr-[40px] rounded-[12px] w-full"
+              name=""
+              id=""
+            >
+              <option value="">sort by</option>
+              <option value="">2</option>
+              <option value="">3</option>
+            </select>
+          </div>
+
+          <div class="flex mt-[24px] gap-[24px] items-start">
+            <div
+              class="bg-white p-[16px] rounded-[12px] border border-[#D9D9D9] max-w-[780px]"
+            >
+              <div class="flex flex-col gap-[6px]">
+                <h4 class="text-[22px] font-semibold">AAPL</h4>
+                <div class="flex gap-[6px]">
+                  <button
+                    class="bg-black text-[14px] px-[14px] py-[4px] rounded-[32px] text-white cursor-pointer"
+                  >
+                    Finance Service
+                  </button>
+                  <button
+                    class="bg-[#F6F7F9] text-[14px] px-[14px] py-[4px] rounded-[32px] text-black cursor-pointer"
+                  >
+                    Energy
+                  </button>
+                  <button
+                    class="bg-[#F6F7F9] text-[14px] px-[14px] py-[4px] rounded-[32px] text-black cursor-pointer"
+                  >
+                    Materials
+                  </button>
+                  <button
+                    class="bg-[#F6F7F9] text-[14px] px-[14px] py-[4px] rounded-[32px] text-black cursor-pointer"
+                  >
+                    Technology
+                  </button>
+                  <button
+                    class="bg-[#F6F7F9] text-[14px] px-[14px] py-[4px] rounded-[32px] text-black cursor-pointer"
+                  >
+                    Media
+                  </button>
+                  <button
+                    class="bg-[#F6F7F9] text-[14px] px-[14px] py-[4px] rounded-[32px] text-black cursor-pointer"
+                  >
+                    Industrial
+                  </button>
+                  <button
+                    class="bg-[#F6F7F9] text-[14px] px-[14px] py-[4px] rounded-[32px] text-black cursor-pointer"
+                  >
+                    Healthcare
+                  </button>
+                </div>
+              </div>
+
+              <table class="mt-[24px]">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Value</th>
+                    <th>Balance</th>
+                    <th class="text-center">Wishlist</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="">
+                      <div class="name">
+                        <img
+                          src="assets/adove-icon.png"
+                          class="logo"
+                          alt="Adobe Logo"
+                        />
+                        AAPL Apple
+                      </div>
+                    </td>
+                    <td><p>$ 201,01</p></td>
+                    <td class="value"><p>- 201,01 ▼</p></td>
+                    <td><p>$ 201,01</p></td>
+                    <td class="wishlist">
+                      <button class="mx-auto">
+                        <img src="assets/wish-icon.svg" alt="" />
+                      </button>
+                    </td>
+                    <td><button class="buy-btn ml-auto flex">Buy</button></td>
+                  </tr>
+                  <tr>
+                    <td class="">
+                      <div class="name">
+                        <img
+                          src="assets/adove-icon.png"
+                          class="logo"
+                          alt="Adobe Logo"
+                        />
+                        AAPL Apple
+                      </div>
+                    </td>
+                    <td><p>$ 201,01</p></td>
+                    <td class="value"><p>- 201,01 ▼</p></td>
+                    <td><p>$ 201,01</p></td>
+                    <td class="wishlist">
+                      <button class="mx-auto">
+                        <img src="assets/wish-icon.svg" alt="" />
+                      </button>
+                    </td>
+                    <td><button class="buy-btn ml-auto flex">Buy</button></td>
+                  </tr>
+                  <tr>
+                    <td class="">
+                      <div class="name">
+                        <img
+                          src="assets/adove-icon.png"
+                          class="logo"
+                          alt="Adobe Logo"
+                        />
+                        AAPL Apple
+                      </div>
+                    </td>
+                    <td><p>$ 201,01</p></td>
+                    <td class="value"><p>- 201,01 ▼</p></td>
+                    <td><p>$ 201,01</p></td>
+                    <td class="wishlist">
+                      <button class="mx-auto">
+                        <img src="assets/wish-icon.svg" alt="" />
+                      </button>
+                    </td>
+                    <td><button class="buy-btn ml-auto flex">Buy</button></td>
+                  </tr>
+                  <tr>
+                    <td class="">
+                      <div class="name">
+                        <img
+                          src="assets/adove-icon.png"
+                          class="logo"
+                          alt="Adobe Logo"
+                        />
+                        AAPL Apple
+                      </div>
+                    </td>
+                    <td><p>$ 201,01</p></td>
+                    <td class="value"><p>- 201,01 ▼</p></td>
+                    <td><p>$ 201,01</p></td>
+                    <td class="wishlist">
+                      <button class="mx-auto">
+                        <img src="assets/wish-icon.svg" alt="" />
+                      </button>
+                    </td>
+                    <td><button class="buy-btn ml-auto flex">Buy</button></td>
+                  </tr>
+                  <tr>
+                    <td class="">
+                      <div class="name">
+                        <img
+                          src="assets/adove-icon.png"
+                          class="logo"
+                          alt="Adobe Logo"
+                        />
+                        AAPL Apple
+                      </div>
+                    </td>
+                    <td><p>$ 201,01</p></td>
+                    <td class="value"><p>- 201,01 ▼</p></td>
+                    <td><p>$ 201,01</p></td>
+                    <td class="wishlist">
+                      <button class="mx-auto">
+                        <img src="assets/wish-icon.svg" alt="" />
+                      </button>
+                    </td>
+                    <td><button class="buy-btn ml-auto flex">Buy</button></td>
+                  </tr>
+                  <tr>
+                    <td class="">
+                      <div class="name">
+                        <img
+                          src="assets/adove-icon.png"
+                          class="logo"
+                          alt="Adobe Logo"
+                        />
+                        AAPL Apple
+                      </div>
+                    </td>
+                    <td><p>$ 201,01</p></td>
+                    <td class="value"><p>- 201,01 ▼</p></td>
+                    <td><p>$ 201,01</p></td>
+                    <td class="wishlist">
+                      <button class="mx-auto">
+                        <img src="assets/wish-icon.svg" alt="" />
+                      </button>
+                    </td>
+                    <td><button class="buy-btn ml-auto flex">Buy</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div
+              class="w-full max-w-[300px] p-[16px] bg-white border border-[#D9D9D9] rounded-[12px]"
+            >
+              <div class="flex items-center justify-between">
+                <div class="text-[24px] font-medium">Stock Market</div>
+                <a class="text-[14px] text-[#55DCFA]" href="">See all</a>
+              </div>
+              <div class="my-[6px]">
+                <button
+                  class="bg-[#55DCFA] rounded-[32px] text-white px-[16px] py-[4px] text-[14px]"
+                >
+                  Get Started
+                </button>
+                <button
+                  class="bg-[#fff] border border-[#081420] rounded-[32px] text-[#081420] px-[16px] py-[4px] text-[14px]"
+                >
+                  Get Started
+                </button>
+              </div>
+              <div class="flex flex-col gap-[24px] mt-[20px]">
+                <div class="flex gap-[12px] justify-between">
+                  <div class="flex items-center gap-[8px]">
+                    <img src="assets/adove-icon.png" alt="" />
+                    <p class="font-medium flex flex-col">
+                      Adobe
+                      <span class="text-[#898989] text-[14px]">Adobe</span>
+                    </p>
+                  </div>
+                  <div class="">
+                    <img src="assets/graph-img.png" alt="" />
+                  </div>
+                </div>
+                <div class="flex gap-[12px] justify-between">
+                  <div class="flex items-center gap-[8px]">
+                    <img src="assets/adove-icon.png" alt="" />
+                    <p class="font-medium flex flex-col">
+                      Adobe
+                      <span class="text-[#898989] text-[14px]">Adobe</span>
+                    </p>
+                  </div>
+                  <div class="">
+                    <img src="assets/graph-img.png" alt="" />
+                  </div>
+                </div>
+                <div class="flex gap-[12px] justify-between">
+                  <div class="flex items-center gap-[8px]">
+                    <img src="assets/adove-icon.png" alt="" />
+                    <p class="font-medium flex flex-col">
+                      Adobe
+                      <span class="text-[#898989] text-[14px]">Adobe</span>
+                    </p>
+                  </div>
+                  <div class="">
+                    <img src="assets/graph-img.png" alt="" />
+                  </div>
+                </div>
+                <div class="flex gap-[12px] justify-between">
+                  <div class="flex items-center gap-[8px]">
+                    <img src="assets/adove-icon.png" alt="" />
+                    <p class="font-medium flex flex-col">
+                      Adobe
+                      <span class="text-[#898989] text-[14px]">Adobe</span>
+                    </p>
+                  </div>
+                  <div class="">
+                    <img src="assets/graph-img.png" alt="" />
+                  </div>
+                </div>
+                <div class="flex gap-[12px] justify-between">
+                  <div class="flex items-center gap-[8px]">
+                    <img src="assets/adove-icon.png" alt="" />
+                    <p class="font-medium flex flex-col">
+                      Adobe
+                      <span class="text-[#898989] text-[14px]">Adobe</span>
+                    </p>
+                  </div>
+                  <div class="">
+                    <img src="assets/graph-img.png" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-[30px]">
+            <h2 class="text-[24px] font-medium text-[#081420]">Stock Predictions</h2>
+          </div>
+          <div class="">
+ <div class="w-full max-w-full p-[16px] bg-white border border-[#D9D9D9] rounded-[12px]">
+                        <div class="flex items-center justify-between flex-wrap gap-[12px]">
+                            <div class="">
+                                <div class="text-[24px] font-medium">AAPL</div>
+                                
+                            </div>
+                            <select
+              class="bg-[#F3F4F8] max-w-[140px] px-[12px] py-[8px] pr-[40px] rounded-[12px] w-full"
+              name=""
+              id=""
+            >
+              <option value="">sort by</option>
+              <option value="">2</option>
+              <option value="">3</option>
+            </select>
+                        
+                        </div>
+                        <div class="flex gap-[6px] mt-[16px] mb-[30px]">
+                  <button
+                    class="bg-black text-[14px] px-[14px] py-[4px] rounded-[32px] text-white cursor-pointer"
+                  >
+                    1 day
+                  </button>
+                  <button
+                    class="bg-[#F6F7F9] text-[14px] px-[14px] py-[4px] rounded-[32px] text-black cursor-pointer"
+                  >
+                    1 week
+                  </button>
+                  <button
+                    class="bg-[#F6F7F9] text-[14px] px-[14px] py-[4px] rounded-[32px] text-black cursor-pointer"
+                  >
+                    1 month
+                  </button>
+                  <button
+                    class="bg-[#F6F7F9] text-[14px] px-[14px] py-[4px] rounded-[32px] text-black cursor-pointer"
+                  >
+                   3 month
+                  </button>
+                  <button
+                    class="bg-[#F6F7F9] text-[14px] px-[14px] py-[4px] rounded-[32px] text-black cursor-pointer"
+                  >
+                   6 month
+                  </button>
+                  <button
+                    class="bg-[#F6F7F9] text-[14px] px-[14px] py-[4px] rounded-[32px] text-black cursor-pointer"
+                  >
+                    1 year
+                  </button>
+                </div>
+                        <canvas id="lineChart" height="120"></canvas>
+                    </div>
+          </div>
+
+        </div>
+      </main>
+      <!-- main -->
+    </section>
+
+
+    <script>
+        const ctx = document.getElementById('lineChart').getContext('2d');
+
+        // Create vertical gradient from top to bottom
+        const gradient = ctx.createLinearGradient(0, 0, 0, 200);
+        gradient.addColorStop(0, 'rgba(85, 220, 250, 0.6)');  // Top
+        gradient.addColorStop(1, 'rgba(85, 220, 250, 0.1)');    // Bottom
+
+        const lineChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+                datasets: [{
+                    label: 'Price',
+                    data: [200, 300, 280, 470, 250, 400, 450],
+                    fill: true,
+                    backgroundColor: gradient,           // gradient fill
+                    borderColor: '#55DCFA',              // sharp line color
+                    borderWidth: 2,
+                    tension: 0,                          // sharp (not curved)
+                    pointRadius: 0,                      // no dots
+                    pointHoverRadius: 6,
+                    pointHoverBackgroundColor: '#55DCFA'
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { display: false }
+                },
+                scales: {
+                    x: {
+                        grid: { display: false }
+                    },
+                    y: {
+                        min: 0,
+                        max: 500,
+                        ticks: {
+                            stepSize: 100,
+                            callback: value => '$' + value,
+                            autoSkip: false
+                        },
+                        grid: {
+                            color: '#F6F7F9'
+                        }
+
+                    }
+
+                }
+            }
+        });
+    </script>
+  </body>
+</html>

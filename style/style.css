@@ -122,3 +122,70 @@
  .faq-item.active .faq-answer {
      display: block;
  }
+
+/* sidebar CSS */
+.sidebar ul li:hover{background-color: #fff;}
+
+
+/* table */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+    }
+    th, td {
+     font-size: 14px;
+     font-weight: 500;
+     padding:6px 0 ;
+    }
+    th {
+      color: #999;
+      font-weight: normal;
+    }
+    .logo {
+      width: 25px;
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+    .name {
+      display: flex;
+      align-items: center;
+    }
+    .value {
+      color: red;
+    }
+    .buy-btn {
+      background-color: #00ccff;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+    .wishlist {
+      text-align: center;
+      font-size: 18px;
+    }
+
+
+
+
+
+ /* responisve */
+@media only screen and (max-width: 1024px){
+.my-container{padding-left: 20px; padding-right: 20px;}
+
+.faq-question {
+    padding: 16px 20px;
+    font-size: 18px;
+}
+.faq-question span img {
+    width: 20px;
+}
+.faq-answer {
+    padding: 16px 20px;
+    padding-top: 0;}
+}
+
+
+

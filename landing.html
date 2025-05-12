@@ -11,12 +11,12 @@
     <title>Velora</title>
 </head>
 <body>
-   <header class="bg-white py-[24px]">
+   <header class="bg-white py-[24px] max-lg:py-[16px]">
     <nav class="my-container flex justify-between items-center">
         <a href="">
             <img src="assets/logo.png" alt="">
         </a>
-        <div class="menu flex gap-[40px]">
+        <div class="menu flex gap-[40px] max-md:gap-[16px] max-sm:hidden">
             <a class="text-[#595959]" href="">Home</a>
             <a class="text-[#595959]" href="">Features</a>
             <a class="text-[#595959]" href="">FAQ</a>
@@ -24,12 +24,12 @@
         <a href="login.html" class="btn-pri !w-[80px]">Login</a>
     </nav>
    </header>
-   <section class="banner h-[64vh]">
+   <section class="banner h-[64vh] max-lg:h-[58vh] max-md:h-[46vh]">
         <div class="my-container h-full flex justify-center items-center">
-            <div class="flex flex-col justify-center items-center">
-                <h1 class="golos-font text-white text-[50px] font-semibold">Smarter Investing Starts Here</h1>
-            <p class="golos-font text-white text-[24px] font-normal mt-[16px]">AI-powered stock predictions and portfolio simulation</p>
-            <div class="flex gap-[16px] mt-[42px]">
+            <div class="flex flex-col justify-center items-center text-center">
+                <h1 class="golos-font text-white text-[50px] font-semibold max-lg:text-[36px] max-sm:text-[32px]">Smarter Investing Starts Here</h1>
+            <p class="golos-font text-white text-[24px] font-normal mt-[16px] max-lg:text-[18px] max-lg:mt-[4px]">AI-powered stock predictions and portfolio simulation</p>
+            <div class="flex gap-[16px] mt-[42px] max-lg:mt-[20px]">
                 <a href="#" class="btn-sec block max-w-max">Try Demo</a>
                 <a href="#" class="btn-pri block max-w-max">Sign Up Free</a>
             </div>
@@ -40,36 +40,36 @@
    <!-- features -->
    <section class="py-[40px]">
     <div class="my-container">
-        <h2 class="golos-font text-[#081420] text-center text-[45px] font-semibold">Core Features</h2>
-        <div class=" grid grid-cols-[repeat(4,_1fr)] gap-[18px] mt-[24px]">
-            <div class="bg-[#DEF3F9] rounded-[10px] p-[20px] max-w-[326px] text-center flex flex-col items-center justify-center">
+        <h2 class="golos-font text-[#081420] text-center text-[45px] font-semibold max-lg:text-[32px] max-md:text-[28px]">Core Features</h2>
+        <div class=" grid grid-cols-[repeat(4,_1fr)] gap-[18px] mt-[24px] max-lg:grid-cols-[repeat(2,326px)] max-lg:justify-center max-md:grid-cols-[repeat(2,1fr)] max-sm:grid-cols-[repeat(1,1fr)] ">
+            <div class="bg-[#DEF3F9] rounded-[10px] p-[20px] max-w-[326px] text-center flex flex-col items-center justify-center max-sm:max-w-full">
                 <img src="assets/feature-1.svg" alt="">
-                <h6 class="golos-font mt-[12px] mb-[6px] font-semibold text-[22px] mt-auto">Real-time Stock Predictions</h6>
-                <p class="text-[#595959] text-[18px]">See updated forecasts powered by AI models using live and historical market data.</p>
+                <h6 class="golos-font mb-[6px] font-semibold text-[22px] mt-auto max-md:text-[20px]">Real-time Stock Predictions</h6>
+                <p class="text-[#595959] text-[18px] max-md:text-[16px]">See updated forecasts powered by AI models using live and historical market data.</p>
             </div>
-            <div class="bg-[#DEF3F9] rounded-[10px] p-[20px] max-w-[326px] text-center flex flex-col items-center justify-center">
+            <div class="bg-[#DEF3F9] rounded-[10px] p-[20px] max-w-[326px] text-center flex flex-col items-center justify-center max-sm:max-w-full">
                 <img src="assets/feature-2.svg" alt="">
-                <h6 class="golos-font mt-[12px] mb-[6px] font-semibold text-[22px] mt-auto">Portfolio Simulator</h6>
-                <p class="text-[#595959] text-[18px]">Practice investing risk-free with our simulator and track your virtual portfolio’s performance.</p>
+                <h6 class="golos-font mb-[6px] font-semibold text-[22px] mt-auto max-md:text-[20px]">Portfolio Simulator</h6>
+                <p class="text-[#595959] text-[18px] max-md:text-[16px]">Practice investing risk-free with our simulator and track your virtual portfolio’s performance.</p>
             </div>
-            <div class="bg-[#DEF3F9] rounded-[10px] p-[20px] max-w-[326px] text-center flex flex-col items-center justify-center">
+            <div class="bg-[#DEF3F9] rounded-[10px] p-[20px] max-w-[326px] text-center flex flex-col items-center justify-center max-sm:max-w-full">
                 <img src="assets/feature-3.svg" alt="">
-                <h6 class="golos-font mt-[12px] mb-[6px] font-semibold text-[22px] mt-auto">Sentiment Analysis</h6>
-                <p class="text-[#595959] text-[18px]">Gauge how the market feels with AI-powered insights from news and social media.</p>
+                <h6 class="golos-font mb-[6px] font-semibold text-[22px] mt-auto max-md:text-[20px]">Sentiment Analysis</h6>
+                <p class="text-[#595959] text-[18px] max-md:text-[16px]">Gauge how the market feels with AI-powered insights from news and social media.</p>
             </div>
-            <div class="bg-[#DEF3F9] rounded-[10px] p-[20px] max-w-[326px] text-center flex flex-col items-center justify-center">
+            <div class="bg-[#DEF3F9] rounded-[10px] p-[20px] max-w-[326px] text-center flex flex-col items-center justify-center max-sm:max-w-full">
                 <img src="assets/feature-4.svg" alt="">
-                <h6 class="golos-font mt-[12px] mb-[6px] font-semibold text-[22px] mt-auto">AI Explanations</h6>
-                <p class="text-[#595959] text-[18px]">Understand predictions with GPT-4-powered reasoning, market sentiment, and volatility trends.</p>
+                <h6 class="golos-font mb-[6px] font-semibold text-[22px] mt-auto max-md:text-[20px]">AI Explanations</h6>
+                <p class="text-[#595959] text-[18px] max-md:text-[16px]">Understand predictions with GPT-4-powered reasoning, market sentiment, and volatility trends.</p>
             </div>
         </div>
     </div>
    </section>
 
    <!-- faq -->
-   <section class="py-[40px]">
+   <section class="py-[40px] max-md:pt-[0]">
     <div class="my-container">
-        <h2 class="golos-font text-[#081420] text-center text-[45px] font-semibold">Frequently Asked Questions</h2>
+        <h2 class="golos-font text-[#081420] text-center text-[45px] font-semibold max-lg:text-[32px] max-md:text-[28px]">Frequently Asked Questions</h2>
 <div class="faq flex flex-col gap-[24px]">
   <div class="faq-item mt-[24px]">
     <div class="faq-question">Is Velora free to use? <span><img class="down" src="assets/arrow-down.svg" alt=""> <img class="up" src="assets/arrow-up.svg" alt=""></span></div>
@@ -92,7 +92,7 @@
    </section>
 
 <footer class="bg-[#D9D9D9] py-[24px]">
-    <div class="my-container flex justify-between">
+    <div class="my-container flex justify-between flex-wrap max-md:items-start max-md:justify-start max-md:gap-[20px]">
         <div class="">
             <img src="assets/logo.png" alt="">
         </div>
