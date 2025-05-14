@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Velora</title>
+  </head>
+
+  <body>
+    <section class="h-[100vh] max-md:min-h-[100vh]">
+      <!-- Sidebar  -->
+      <aside
+        class="sidebar w-full max-w-[300px] p-[24px] border-r border-r-[#E5E5E5] fixed left-0 top-0 z-[999] h-full bg-[#F6F7F9] max-xl:p-[16px] max-xl:max-w-[260px] max-lg:hidden"
+      >
+        <div class="pb-[54px]">
+          <a href=""><img src="assets/logo.png" alt="" /></a>
+        </div>
+        <ul class="flex flex-col gap-[12px] h-[calc(100%-100px)]">
+          <li class="rounded-[16px]">
+            <a
+              class="flex items-center gap-[8px] font-medium text-[#081420] p-[14px]"
+              href="dashboard.html"
+              ><img src="assets/Home-icon.svg" alt="" />Home</a
+            >
+          </li>
+          <li class="rounded-[16px]">
+            <a
+              class="flex items-center gap-[8px] font-medium text-[#081420] p-[14px]"
+              href="stockPredictions.html"
+              ><img src="assets/stock-icon.svg" alt="" />Stock Predictions</a
+            >
+          </li>
+          <li class="rounded-[16px] bg-white">
+            <a
+              class="flex items-center gap-[8px] font-medium text-[#081420] p-[14px]"
+              href="portfolio.html"
+              ><img src="assets/portfolio-icon.svg" alt="" />Portfolio</a
+            >
+          </li>
+          <li class="rounded-[16px]">
+            <a
+              class="flex items-center gap-[8px] font-medium text-[#081420] p-[14px]"
+              href="sentiment.html"
+              ><img src="assets/sentiment-icon.svg" alt="" />Sentiment</a
+            >
+          </li>
+          <li class="rounded-[16px]">
+            <a
+              class="flex items-center gap-[8px] font-medium text-[#081420] p-[14px]"
+              href=""
+              ><img src="assets/notification-icon.svg" alt="" />Notifications</a
+            >
+          </li>
+          <li class="rounded-[16px]">
+            <a
+              class="flex items-center gap-[8px] font-medium text-[#081420] p-[14px]"
+              href=""
+              ><img src="assets/setting-icon.svg" alt="" />Settings</a
+            >
+          </li>
+          <li class="rounded-[16px] mt-auto">
+            <a
+              class="flex items-center gap-[8px] font-medium text-[#081420] p-[14px]"
+              href=""
+              ><img src="assets/logout-icon.svg" alt="" />Logout</a
+            >
+          </li>
+        </ul>
+      </aside>
+      <!-- Sidebar  -->
+
+      <!-- header -->
+      <header
+        class="border-b border-b-[#E5E5E5] flex justify-end p-[20px] w-[calc(100%-300px)] ml-auto max-xl:w-[calc(100%-260px)] max-lg:w-full"
+      >
+        <div class="search relative max-w-[300px] w-full">
+          <input
+            class="bg-[#EEEEEE] px-[20px] py-[12px] pr-[40px] rounded-[12px] w-full"
+            type="text"
+            placeholder="Search here..."
+          />
+          <button class="absolute right-[12px] top-[12px] cursor-pointer">
+            <img src="assets/search-icon.svg" alt="" />
+          </button>
+        </div>
+        <div class="user ml-[20px]">
+          <a href="">
+            <img src="assets/user-icon.png" alt="" />
+          </a>
+        </div>
+      </header>
+      <!-- header -->
+
+      <!-- main -->
+      <main
+        class="w-[calc(100%-300px)] ml-auto p-[20px] max-xl:w-[calc(100%-260px)] max-lg:w-full"
+      >
+        <div class="max-w-[1080px]">
+          <div class="">
+            <h2 class="text-[24px] font-medium text-[#081420]">
+              Portfolio Simulator
+            </h2>
+          </div>
+          <div class="">
+            <div
+              class="w-full max-w-full p-[16px] bg-white border border-[#D9D9D9] rounded-[12px]"
+            >
+              <div
+                class="flex items-center justify-between flex-wrap gap-[12px]"
+              >
+                <div class="">
+                  <div class="text-[24px] font-medium">
+                    Balance: <span class="font-light">$12,420 (Simulated)</span>
+                  </div>
+                </div>
+              </div>
+              <div class="my-[6px] flex gap-[12px] flex-wrap">
+                <button
+                  class="bg-[#55DCFA] rounded-[32px] text-white px-[16px] py-[4px] text-[14px] cursor-pointer"
+                >
+                 Today's Change: +$120
+                </button>
+                <button
+                  class="bg-[#fff] border border-[#081420] rounded-[32px] text-[#081420] px-[16px] py-[4px] text-[14px] cursor-pointer"
+                >
+                 Total Return: +8.2%
+                </button>
+              </div>
+               <div
+                class="flex items-center justify-between flex-wrap gap-[12px]"
+              >
+                <div class="">
+                  <div class="text-[24px] font-medium">
+                    AAPL
+                  </div>
+                </div>
+
+                <select
+                  class="bg-[#F3F4F8] max-w-[140px] px-[12px] py-[8px] pr-[40px] rounded-[12px] w-full"
+                  name=""
+                  id=""
+                >
+                  <option value="">sort by</option>
+                  <option value="">2</option>
+                  <option value="">3</option>
+                </select>
+              </div>
+              <div class="flex gap-[6px] mt-[16px] mb-[30px] flex-wrap">
+                <button
+                  class="bg-black text-[14px] px-[14px] py-[4px] rounded-[32px] text-white cursor-pointer"
+                >
+                  1 day
+                </button>
+                <button
+                  class="bg-[#F6F7F9] text-[14px] px-[14px] py-[4px] rounded-[32px] text-black cursor-pointer"
+                >
+                  1 week
+                </button>
+                <button
+                  class="bg-[#F6F7F9] text-[14px] px-[14px] py-[4px] rounded-[32px] text-black cursor-pointer"
+                >
+                  1 month
+                </button>
+                <button
+                  class="bg-[#F6F7F9] text-[14px] px-[14px] py-[4px] rounded-[32px] text-black cursor-pointer"
+                >
+                  3 month
+                </button>
+                <button
+                  class="bg-[#F6F7F9] text-[14px] px-[14px] py-[4px] rounded-[32px] text-black cursor-pointer"
+                >
+                  6 month
+                </button>
+                <button
+                  class="bg-[#F6F7F9] text-[14px] px-[14px] py-[4px] rounded-[32px] text-black cursor-pointer"
+                >
+                  1 year
+                </button>
+              </div>
+              <canvas id="lineChart" height="80"></canvas>
+            </div>
+          </div>
+
+          <h2 class="text-[24px] font-medium text-[#081420] mt-[30px]">
+               Manage Holdings
+            </h2>
+          <div class="w-full overflow-auto ">
+              <div class="bg-white rounded-[12px] border border-[#D9D9D9] p-[16px] max-md:max-w-[600px] max-md:w-[600px]">
+                  <table class="">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Buy Date</th>
+                    <th>Price</th>
+                    <th>Qty</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><p>  John Doe</p></td>
+                    <td><p>12 Mar, 2025</p></td>
+                    <td><p>$201,01</p></td>
+                    <td><p>2</p></td>
+                    <td>
+                      <button class="mx-auto cursor-pointer">
+                        <img class="w-[24px]" src="assets/edit-icon.svg" alt="" />
+                      </button>
+                      <button class="mx-auto cursor-pointer">
+                        <img class="w-[24px]" src="assets/delete-icon.svg" alt="" />
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><p>  John Doe</p></td>
+                    <td><p>12 Mar, 2025</p></td>
+                    <td><p>$201,01</p></td>
+                    <td><p>2</p></td>
+                    <td>
+                      <button class="mx-auto cursor-pointer">
+                        <img class="w-[24px]" src="assets/edit-icon.svg" alt="" />
+                      </button>
+                      <button class="mx-auto cursor-pointer">
+                        <img class="w-[24px]" src="assets/delete-icon.svg" alt="" />
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><p>  John Doe</p></td>
+                    <td><p>12 Mar, 2025</p></td>
+                    <td><p>$201,01</p></td>
+                    <td><p>2</p></td>
+                    <td>
+                      <button class="mx-auto cursor-pointer">
+                        <img class="w-[24px]" src="assets/edit-icon.svg" alt="" />
+                      </button>
+                      <button class="mx-auto cursor-pointer">
+                        <img class="w-[24px]" src="assets/delete-icon.svg" alt="" />
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><p>  John Doe</p></td>
+                    <td><p>12 Mar, 2025</p></td>
+                    <td><p>$201,01</p></td>
+                    <td><p>2</p></td>
+                    <td>
+                      <button class="mx-auto cursor-pointer">
+                        <img class="w-[24px]" src="assets/edit-icon.svg" alt="" />
+                      </button>
+                      <button class="mx-auto cursor-pointer">
+                        <img class="w-[24px]" src="assets/delete-icon.svg" alt="" />
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><p>  John Doe</p></td>
+                    <td><p>12 Mar, 2025</p></td>
+                    <td><p>$201,01</p></td>
+                    <td><p>2</p></td>
+                    <td>
+                      <button class="mx-auto cursor-pointer">
+                        <img class="w-[24px]" src="assets/edit-icon.svg" alt="" />
+                      </button>
+                      <button class="mx-auto cursor-pointer">
+                        <img class="w-[24px]" src="assets/delete-icon.svg" alt="" />
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><p>  John Doe</p></td>
+                    <td><p>12 Mar, 2025</p></td>
+                    <td><p>$201,01</p></td>
+                    <td><p>2</p></td>
+                    <td>
+                      <button class="mx-auto cursor-pointer">
+                        <img class="w-[24px]" src="assets/edit-icon.svg" alt="" />
+                      </button>
+                      <button class="mx-auto cursor-pointer">
+                        <img class="w-[24px]" src="assets/delete-icon.svg" alt="" />
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><p>  John Doe</p></td>
+                    <td><p>12 Mar, 2025</p></td>
+                    <td><p>$201,01</p></td>
+                    <td><p>2</p></td>
+                    <td>
+                      <button class="mx-auto cursor-pointer">
+                        <img class="w-[24px]" src="assets/edit-icon.svg" alt="" />
+                      </button>
+                      <button class="mx-auto cursor-pointer">
+                        <img class="w-[24px]" src="assets/delete-icon.svg" alt="" />
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><p>  John Doe</p></td>
+                    <td><p>12 Mar, 2025</p></td>
+                    <td><p>$201,01</p></td>
+                    <td><p>2</p></td>
+                    <td>
+                      <button class="mx-auto cursor-pointer">
+                        <img class="w-[24px]" src="assets/edit-icon.svg" alt="" />
+                      </button>
+                      <button class="mx-auto cursor-pointer">
+                        <img class="w-[24px]" src="assets/delete-icon.svg" alt="" />
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><p>  John Doe</p></td>
+                    <td><p>12 Mar, 2025</p></td>
+                    <td><p>$201,01</p></td>
+                    <td><p>2</p></td>
+                    <td>
+                      <button class="mx-auto cursor-pointer">
+                        <img class="w-[24px]" src="assets/edit-icon.svg" alt="" />
+                      </button>
+                      <button class="mx-auto cursor-pointer">
+                        <img class="w-[24px]" src="assets/delete-icon.svg" alt="" />
+                      </button>
+                    </td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <button class="bg-black text-white rounded-full py-[6px] px-[20px] mt-[20px] ml-auto">Add Stock</button>
+
+           <h2 class="text-[24px] font-medium text-[#081420] mt-[30px]">
+             Learning Tips
+            </h2>
+            <div class="bg-white p-[16px] rounded-[12px] flex flex-col gap-3">
+              <p class="bg-[#F6F7F9] rounded-[12px] p-[12px] font-medium">Diversify your investments to reduce risk.</p>
+              <p class="bg-[#F6F7F9] rounded-[12px] p-[12px] font-medium">Track your gains regularly to make decisions.</p>
+            </div>
+        </div>
+      </main>
+      <!-- main -->
+    </section>
+
+    <script>
+      const ctx = document.getElementById("lineChart").getContext("2d");
+
+      // Create vertical gradient from top to bottom
+      const gradient = ctx.createLinearGradient(0, 0, 0, 200);
+      gradient.addColorStop(0, "rgba(85, 220, 250, 0.6)"); // Top
+      gradient.addColorStop(1, "rgba(85, 220, 250, 0.1)"); // Bottom
+
+      const lineChart = new Chart(ctx, {
+        type: "line",
+        data: {
+          labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
+          datasets: [
+            {
+              label: "Main Line",
+              data: [200, 300, 280, 500, 250, 500, 450],
+              fill: true,
+              backgroundColor: gradient,
+              borderColor: "#55DCFA",
+              borderWidth: 3,
+              tension: 0,
+              pointRadius: 0,
+              pointHoverRadius: 6,
+              pointHoverBackgroundColor: "#55DCFA",
+            },
+            {
+              label: "Dashed Comparison",
+              data: [150, 220, 260, 100, 350, 400, 380],
+              fill: false,
+              borderColor: "#000000",
+              borderWidth: 2,
+              borderDash: [8, 4],
+              tension: 0,
+              pointRadius: 0,
+              pointHoverRadius: 6,
+              pointHoverBackgroundColor: "#FF8C00",
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: { display: false },
+          },
+          scales: {
+            x: {
+              grid: { display: false },
+            },
+            y: {
+              min: 0,
+              max: 500,
+              ticks: {
+                stepSize: 100,
+                callback: (value) => "$" + value,
+                autoSkip: false,
+              },
+              grid: {
+                color: "#F6F7F9",
+              },
+            },
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

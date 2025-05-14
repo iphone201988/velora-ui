@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Velora</title>
+  </head>
+
+  <body>
+    <section class="h-[100vh] max-md:min-h-[100vh]">
+      <!-- Sidebar  -->
+      <aside
+        class="sidebar w-full max-w-[300px] p-[24px] border-r border-r-[#E5E5E5] fixed left-0 top-0 z-[999] h-full bg-[#F6F7F9] max-xl:p-[16px] max-xl:max-w-[260px] max-lg:hidden"
+      >
+        <div class="pb-[54px]">
+          <a href=""><img src="assets/logo.png" alt="" /></a>
+        </div>
+        <ul class="flex flex-col gap-[12px] h-[calc(100%-100px)]">
+          <li class="rounded-[16px]">
+            <a
+              class="flex items-center gap-[8px] font-medium text-[#081420] p-[14px]"
+              href="dashboard.html"
+              ><img src="assets/Home-icon.svg" alt="" />Home</a
+            >
+          </li>
+          <li class="rounded-[16px]">
+            <a
+              class="flex items-center gap-[8px] font-medium text-[#081420] p-[14px]"
+              href=""
+              ><img src="assets/stock-icon.svg" alt="" />Stock Predictions</a
+            >
+          </li>
+          <li class="rounded-[16px]">
+            <a
+              class="flex items-center gap-[8px] font-medium text-[#081420] p-[14px]"
+              href="portfolio.html"
+              ><img src="assets/portfolio-icon.svg" alt="" />Portfolio</a
+            >
+          </li>
+          <li class="rounded-[16px] bg-white">
+            <a
+              class="flex items-center gap-[8px] font-medium text-[#081420] p-[14px]"
+              href=""
+              ><img src="assets/sentiment-icon.svg" alt="" />Sentiment</a
+            >
+          </li>
+          <li class="rounded-[16px]">
+            <a
+              class="flex items-center gap-[8px] font-medium text-[#081420] p-[14px]"
+              href=""
+              ><img src="assets/notification-icon.svg" alt="" />Notifications</a
+            >
+          </li>
+          <li class="rounded-[16px]">
+            <a
+              class="flex items-center gap-[8px] font-medium text-[#081420] p-[14px]"
+              href=""
+              ><img src="assets/setting-icon.svg" alt="" />Settings</a
+            >
+          </li>
+          <li class="rounded-[16px] mt-auto">
+            <a
+              class="flex items-center gap-[8px] font-medium text-[#081420] p-[14px]"
+              href=""
+              ><img src="assets/logout-icon.svg" alt="" />Logout</a
+            >
+          </li>
+        </ul>
+      </aside>
+      <!-- Sidebar  -->
+
+      <!-- header -->
+      <header
+        class="border-b border-b-[#E5E5E5] flex justify-end p-[20px] w-[calc(100%-300px)] ml-auto max-xl:w-[calc(100%-260px)] max-lg:w-full"
+      >
+        <div class="search relative max-w-[300px] w-full">
+          <input
+            class="bg-[#EEEEEE] px-[20px] py-[12px] pr-[40px] rounded-[12px] w-full"
+            type="text"
+            placeholder="Search here..."
+          />
+          <button class="absolute right-[12px] top-[12px] cursor-pointer">
+            <img src="assets/search-icon.svg" alt="" />
+          </button>
+        </div>
+        <div class="user ml-[20px]">
+          <a href="">
+            <img src="assets/user-icon.png" alt="" />
+          </a>
+        </div>
+      </header>
+      <!-- header -->
+
+      <!-- main -->
+      <main
+        class="w-[calc(100%-300px)] ml-auto p-[20px] max-xl:w-[calc(100%-260px)] max-lg:w-full"
+      >
+        <div class="max-w-[1080px]">
+          <div class="">
+            <h2 class="text-[24px] font-medium text-[#081420]">
+              Sentiments
+            </h2>
+            <div class="bg-white p-[16px] rounded-[12px] flex flex-col gap-3">
+             <p class="text-[18px] font-medium">Market Overview Sentiment</p>
+            <div class=" flex gap-[16px] max-md:flex-col">
+                 <div class="max-w-[230px] w-full rounded-[16px] border border-[#34A853] p-[16px] text-center bg-[#E1F2E5]">
+                <p class="font-medium">Tech-Led Growth</p>
+                <p class="text-[12px] text-[#34A853]">Confidence: 78%</p>
+             </div>
+              <div class="max-w-[230px] w-full rounded-[16px] border border-[#EB4335] p-[16px] text-center bg-[#FCE3E1]">
+                <p class="font-medium">Fed Hike Concerns</p>
+                <p class="text-[12px] text-[#EB4335]">Confidence: 67%</p>
+             </div>
+            </div>
+            </div>
+          </div>
+        
+
+          <h2 class="text-[24px] font-medium text-[#081420] mt-[30px]">
+              Latest News with Sentiment
+            </h2>
+             <div class="flex gap-[20px] mt-[24px] max-md:ga-[12px] max-md:flex-wrap">
+            <div class="search relative max-w-[540px] w-full">
+              <input
+                class="bg-[#ffffff] border border-[#D9D9D9] px-[20px] py-[12px] pr-[40px] rounded-[12px] w-full"
+                type="text"
+                placeholder="search here"
+              />
+              <button class="absolute right-[12px] top-[12px] cursor-pointer">
+                <img src="assets/search-icon.svg" alt="" />
+              </button>
+            </div>
+            <div class="flex gap-[12px] flex-wrap">
+                <button class="bg-[#55DCFA] border border-[#D9D9D9] px-[20px] py-[12px] rounded-[12px]">
+                All
+            </button>
+            <button class="bg-[#ffffff] border border-[#D9D9D9] px-[20px] py-[12px] rounded-[12px]">
+                Positive
+            </button>
+            <button class="bg-[#ffffff] border border-[#D9D9D9] px-[20px] py-[12px] rounded-[12px]">
+                Neutral
+            </button>
+            <button class="bg-[#ffffff] border border-[#D9D9D9] px-[20px] py-[12px] rounded-[12px]">
+                Negative
+            </button>
+            </div>
+           
+          </div>
+
+           <div class=" mt-[24px] grid grid-cols-3 gap-[16px] max-md:grid-cols-2 max-sm:grid-cols-1">
+                <div class="bg-white p-[20px] rounded-[16px] max-w-[380px]">
+                    <div class="flex items-center gap-[6px]">
+                        <span class="w-[20px] h-[20px] bg-[#34A853] block rounded-full"></span>
+                        <p class="text-[14px] font-medium">Apple exceeds earnings expectations</p>
+                    </div>
+                    <div class="p-[16px] flex flex-col rounded-[16px] justify-center items-center bg-[#E1F2E5] mt-[8px]">
+                        <h6 class="text-[24px] font-medium text-[#34A853]">CNBC</h6>
+                        <span class="text-[14px] text#595959]">Source</span>
+                    </div>
+                </div>
+                <div class="bg-white p-[20px] rounded-[16px] max-w-[380px]">
+                    <div class="flex items-center gap-[6px]">
+                        <span class="w-[20px] h-[20px] bg-[#EB4335] block rounded-full"></span>
+                        <p class="text-[14px] font-medium">Tesla faces SEC probe</p>
+                    </div>
+                    <div class="p-[16px] flex flex-col rounded-[16px] justify-center items-center bg-[#FCE3E1] mt-[8px]">
+                        <h6 class="text-[24px] font-medium text-[#EB4335]">Reuters</h6>
+                        <span class="text-[14px] text#595959]">Source</span>
+                    </div>
+                </div>
+                <div class="bg-white p-[20px] rounded-[16px] max-w-[380px]">
+                    <div class="flex items-center gap-[6px]">
+                        <span class="w-[20px] h-[20px] bg-[#FBBC05] block rounded-full"></span>
+                        <p class="text-[14px] font-medium">Amazon tests new ad  model</p>
+                    </div>
+                    <div class="p-[16px] flex flex-col rounded-[16px] justify-center items-center bg-[#FFF5DA] mt-[8px]">
+                        <h6 class="text-[24px] font-medium text-[#FBBC05]">Bloomberg</h6>
+                        <span class="text-[14px] text#595959]">Source</span>
+                    </div>
+                </div>
+                <div class="bg-white p-[20px] rounded-[16px] max-w-[380px]">
+                    <div class="flex items-center gap-[6px]">
+                        <span class="w-[20px] h-[20px] bg-[#34A853] block rounded-full"></span>
+                        <p class="text-[14px] font-medium">Apple exceeds earnings expectations</p>
+                    </div>
+                    <div class="p-[16px] flex flex-col rounded-[16px] justify-center items-center bg-[#E1F2E5] mt-[8px]">
+                        <h6 class="text-[24px] font-medium text-[#34A853]">CNBC</h6>
+                        <span class="text-[14px] text#595959]">Source</span>
+                    </div>
+                </div>
+                <div class="bg-white p-[20px] rounded-[16px] max-w-[380px]">
+                    <div class="flex items-center gap-[6px]">
+                        <span class="w-[20px] h-[20px] bg-[#EB4335] block rounded-full"></span>
+                        <p class="text-[14px] font-medium">Tesla faces SEC probe</p>
+                    </div>
+                    <div class="p-[16px] flex flex-col rounded-[16px] justify-center items-center bg-[#FCE3E1] mt-[8px]">
+                        <h6 class="text-[24px] font-medium text-[#EB4335]">Reuters</h6>
+                        <span class="text-[14px] text#595959]">Source</span>
+                    </div>
+                </div>
+                <div class="bg-white p-[20px] rounded-[16px] max-w-[380px]">
+                    <div class="flex items-center gap-[6px]">
+                        <span class="w-[20px] h-[20px] bg-[#FBBC05] block rounded-full"></span>
+                        <p class="text-[14px] font-medium">Amazon tests new ad  model</p>
+                    </div>
+                    <div class="p-[16px] flex flex-col rounded-[16px] justify-center items-center bg-[#FFF5DA] mt-[8px]">
+                        <h6 class="text-[24px] font-medium text-[#FBBC05]">Bloomberg</h6>
+                        <span class="text-[14px] text#595959]">Source</span>
+                    </div>
+                </div>
+            </div>
+
+            
+          <h2 class="text-[24px] font-medium text-[#081420] mt-[30px]">
+              Social Trends
+            </h2>
+         <div class="w-full overflow-auto ">
+              <div class="bg-white rounded-[12px] border border-[#D9D9D9] p-[16px] max-md:max-w-[600px] max-md:w-[600px]">
+                  <table class="">
+                <thead>
+                  <tr>
+                    <th>Color</th>
+                    <th>Ticker</th>
+                    <th>Score</th>
+                    <th>Buzz Status</th>
+                    <th>Platform</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><p class="w-[20px] h-[20px] rounded-full bg-[#34A853]"> </p></td>
+                    <td><p>TSLA</p></td>
+                    <td><p>+92</p></td>
+                    <td><p>High</p></td>
+                    <td><p>Twitter</p></td>
+                  </tr>
+                  <tr>
+                    <td><p class="w-[20px] h-[20px] rounded-full bg-[#EB4335]"> </p></td>
+                    <td><p>TSLA</p></td>
+                    <td><p>+92</p></td>
+                    <td><p>High</p></td>
+                    <td><p>Twitter</p></td>
+                  </tr>
+                  <tr>
+                    <td><p class="w-[20px] h-[20px] rounded-full bg-[#FBBC05]"> </p></td>
+                    <td><p>TSLA</p></td>
+                    <td><p>+92</p></td>
+                    <td><p>High</p></td>
+                    <td><p>Twitter</p></td>
+                  </tr>
+                  <tr>
+                    <td><p class="w-[20px] h-[20px] rounded-full bg-[#34A853]"> </p></td>
+                    <td><p>TSLA</p></td>
+                    <td><p>+92</p></td>
+                    <td><p>High</p></td>
+                    <td><p>Twitter</p></td>
+                  </tr>
+                  <tr>
+                    <td><p class="w-[20px] h-[20px] rounded-full bg-[#34A853]"> </p></td>
+                    <td><p>TSLA</p></td>
+                    <td><p>+92</p></td>
+                    <td><p>High</p></td>
+                    <td><p>Twitter</p></td>
+                  </tr>
+                  <tr>
+                    <td><p class="w-[20px] h-[20px] rounded-full bg-[#34A853]"> </p></td>
+                    <td><p>TSLA</p></td>
+                    <td><p>+92</p></td>
+                    <td><p>High</p></td>
+                    <td><p>Twitter</p></td>
+                  </tr>
+                  <tr>
+                    <td><p class="w-[20px] h-[20px] rounded-full bg-[#34A853]"> </p></td>
+                    <td><p>TSLA</p></td>
+                    <td><p>+92</p></td>
+                    <td><p>High</p></td>
+                    <td><p>Twitter</p></td>
+                  </tr>
+                 
+                 
+                  
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- main -->
+    </section>
+
+    <script>
+      const ctx = document.getElementById("lineChart").getContext("2d");
+
+      // Create vertical gradient from top to bottom
+      const gradient = ctx.createLinearGradient(0, 0, 0, 200);
+      gradient.addColorStop(0, "rgba(85, 220, 250, 0.6)"); // Top
+      gradient.addColorStop(1, "rgba(85, 220, 250, 0.1)"); // Bottom
+
+      const lineChart = new Chart(ctx, {
+        type: "line",
+        data: {
+          labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
+          datasets: [
+            {
+              label: "Main Line",
+              data: [200, 300, 280, 500, 250, 500, 450],
+              fill: true,
+              backgroundColor: gradient,
+              borderColor: "#55DCFA",
+              borderWidth: 3,
+              tension: 0,
+              pointRadius: 0,
+              pointHoverRadius: 6,
+              pointHoverBackgroundColor: "#55DCFA",
+            },
+            {
+              label: "Dashed Comparison",
+              data: [150, 220, 260, 100, 350, 400, 380],
+              fill: false,
+              borderColor: "#000000",
+              borderWidth: 2,
+              borderDash: [8, 4],
+              tension: 0,
+              pointRadius: 0,
+              pointHoverRadius: 6,
+              pointHoverBackgroundColor: "#FF8C00",
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: { display: false },
+          },
+          scales: {
+            x: {
+              grid: { display: false },
+            },
+            y: {
+              min: 0,
+              max: 500,
+              ticks: {
+                stepSize: 100,
+                callback: (value) => "$" + value,
+                autoSkip: false,
+              },
+              grid: {
+                color: "#F6F7F9",
+              },
+            },
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
