@@ -1,96 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Chart with Dashed Line</title>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 20px;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <title>Chart with Dashed Line</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style/style.css">
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
 
-    .chart-container {
-      max-width: 700px;
-      margin: auto;
-    }
-  </style>
-</head>
-<body>
-  <div class="chart-container">
+      .chart-container {
+        max-width: 700px;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="chart-container">
     <canvas id="lineChart" height="100"></canvas>
   </div>
 
-  <script>
-    const ctx = document.getElementById('lineChart').getContext('2d');
+    
 
-    // Create gradient fill for the main line
-    const gradient = ctx.createLinearGradient(0, 0, 0, 200);
-    gradient.addColorStop(0, 'rgba(85, 220, 250, 0.4)');
-    gradient.addColorStop(1, 'rgba(85, 220, 250, 0)');
+    <script>
+      const ctx = document.getElementById("lineChart").getContext("2d");
 
-    const lineChart = new Chart(ctx, {
-      type: 'line',
-      data: {
-        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
-        datasets: [
-          {
-            label: 'Main Line',
-            data: [200, 300, 280, 500, 250, 500, 450],
-            fill: true,
-            backgroundColor: gradient,
-            borderColor: '#55DCFA',
-            borderWidth: 3,
-            tension: 0,
-            pointRadius: 0,
-            pointHoverRadius: 6,
-            pointHoverBackgroundColor: '#55DCFA'
-          },
-          {
-            label: 'Dashed Comparison',
-            data: [150, 220, 260, 300, 350, 400, 380],
-            fill: false,
-            borderColor: '#FF8C00',
-            borderWidth: 2,
-            borderDash: [8, 4],
-            tension: 0,
-            pointRadius: 0,
-            pointHoverRadius: 6,
-            pointHoverBackgroundColor: '#FF8C00'
-          }
-        ]
-      },
-      options: {
-        responsive: true,
-        plugins: {
-          legend: { display: true }
+      // Create gradient fill for the main line
+      const gradient = ctx.createLinearGradient(0, 0, 0, 200);
+      gradient.addColorStop(0, "rgba(85, 220, 250, 0.4)");
+      gradient.addColorStop(1, "rgba(85, 220, 250, 0)");
+
+      const lineChart = new Chart(ctx, {
+        type: "line",
+        data: {
+          labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
+          datasets: [
+            {
+              label: "Main Line",
+              data: [200, 300, 280, 500, 250, 500, 450],
+              fill: true,
+              backgroundColor: gradient,
+              borderColor: "#55DCFA",
+              borderWidth: 3,
+              tension: 0,
+              pointRadius: 0,
+              pointHoverRadius: 6,
+              pointHoverBackgroundColor: "#55DCFA",
+            },
+            {
+              label: "Dashed Comparison",
+              data: [150, 220, 260, 300, 350, 400, 380],
+              fill: false,
+              borderColor: "#FF8C00",
+              borderWidth: 2,
+              borderDash: [8, 4],
+              tension: 0,
+              pointRadius: 0,
+              pointHoverRadius: 6,
+              pointHoverBackgroundColor: "#FF8C00",
+            },
+          ],
         },
-        scales: {
-          x: {
-            grid: {
-              display: false,
-              drawBorder: false
-            },
-            ticks: {
-              display: true
-            }
+        options: {
+          responsive: true,
+          plugins: {
+            legend: { display: true },
           },
-          y: {
-            min: 0,
-            max: 500,
-            ticks: {
-              stepSize: 100,
-              callback: value => '$' + value,
-              autoSkip: false
+          scales: {
+            x: {
+              grid: {
+                display: false,
+                drawBorder: false,
+              },
+              ticks: {
+                display: true,
+              },
             },
-            grid: {
-              color: '#F6F7F9',
-              drawBorder: false
-            }
-          }
-        }
-      }
-    });
-  </script>
-</body>
+            y: {
+              min: 0,
+              max: 500,
+              ticks: {
+                stepSize: 100,
+                callback: (value) => "$" + value,
+                autoSkip: false,
+              },
+              grid: {
+                color: "#F6F7F9",
+                drawBorder: false,
+              },
+            },
+          },
+        },
+      });
+    </script>
+  </body>
 </html>

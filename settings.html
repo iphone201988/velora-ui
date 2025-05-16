@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Velora</title>
+  </head>
+
+  <body>
+    <section class="h-[100vh] max-md:min-h-[100vh]">
+      <!-- Sidebar  -->
+      <aside
+        class="sidebar w-full max-w-[300px] p-[24px] border-r border-r-[#E5E5E5] fixed left-0 top-0 z-[999] h-full bg-[#F6F7F9] max-xl:p-[16px] max-xl:max-w-[260px] max-lg:hidden"
+      >
+        <div class="pb-[54px]">
+          <a href=""><img src="assets/logo.png" alt="" /></a>
+        </div>
+        <ul class="flex flex-col gap-[12px] h-[calc(100%-100px)]">
+          <li class="rounded-[16px]">
+            <a
+              class="flex items-center gap-[8px] font-medium text-[#081420] p-[14px]"
+              href="dashboard.html"
+              ><img src="assets/Home-icon.svg" alt="" />Home</a
+            >
+          </li>
+          <li class="rounded-[16px]">
+            <a
+              class="flex items-center gap-[8px] font-medium text-[#081420] p-[14px]"
+              href=""
+              ><img src="assets/stock-icon.svg" alt="" />Stock Predictions</a
+            >
+          </li>
+          <li class="rounded-[16px]">
+            <a
+              class="flex items-center gap-[8px] font-medium text-[#081420] p-[14px]"
+              href="portfolio.html"
+              ><img src="assets/portfolio-icon.svg" alt="" />Portfolio</a
+            >
+          </li>
+          <li class="rounded-[16px]">
+            <a
+              class="flex items-center gap-[8px] font-medium text-[#081420] p-[14px]"
+              href="sentiment.html"
+              ><img src="assets/sentiment-icon.svg" alt="" />Sentiment</a
+            >
+          </li>
+          <li class="rounded-[16px] ">
+            <a
+              class="flex items-center gap-[8px] font-medium text-[#081420] p-[14px]"
+              href="notification.html"
+              ><img src="assets/notification-icon.svg" alt="" />Notifications</a
+            >
+          </li>
+          <li class="rounded-[16px]  bg-white">
+            <a
+              class="flex items-center gap-[8px] font-medium text-[#081420] p-[14px]"
+              href="settings.html"
+              ><img src="assets/setting-icon.svg" alt="" />Settings</a
+            >
+          </li>
+          <li class="rounded-[16px] mt-auto">
+            <a
+              class="flex items-center gap-[8px] font-medium text-[#081420] p-[14px]"
+              href=""
+              ><img src="assets/logout-icon.svg" alt="" />Logout</a
+            >
+          </li>
+        </ul>
+      </aside>
+      <!-- Sidebar  -->
+
+      <!-- header -->
+      <header
+        class="border-b border-b-[#E5E5E5] flex justify-end p-[20px] w-[calc(100%-300px)] ml-auto max-xl:w-[calc(100%-260px)] max-lg:w-full"
+      >
+        <div class="search relative max-w-[300px] w-full">
+          <input
+            class="bg-[#EEEEEE] px-[20px] py-[12px] pr-[40px] rounded-[12px] w-full"
+            type="text"
+            placeholder="Search here..."
+          />
+          <button class="absolute right-[12px] top-[12px] cursor-pointer">
+            <img src="assets/search-icon.svg" alt="" />
+          </button>
+        </div>
+        <div class="user ml-[20px]">
+          <a href="">
+            <img src="assets/user-icon.png" alt="" />
+          </a>
+        </div>
+      </header>
+      <!-- header -->
+
+      <!-- main -->
+      <main
+        class="w-[calc(100%-300px)] ml-auto p-[20px] max-xl:w-[calc(100%-260px)] max-lg:w-full"
+      >
+        <div class="max-w-[1080px]">
+          <div class="">
+            <h2 class="text-[24px] font-medium text-[#081420]">
+              Settings
+            </h2>
+
+            <div class="flex gap-[16px] mt-[12px] items-start max-xl:flex-col">
+                <div class="bg-white p-[16px] max-w-[700px] w-full rounded-[16px] border border-[#D9D9D9]">
+                <div class="pb-[0px] border-[#E5E5E5] border-b">
+                 <h5 class="text-[18px] font-medium">Account Settings</h5>
+                <p class="text-[#595959]">Update profile photo and personal detail here</p>
+               <div class="relative max-w-[90px] mx-auto my-[60px]">
+                 <div class=" w-[90px] h-[90px] rounded-full overflow-hidden mx-auto">
+                    <img class="object-cover" src="assets/user-img.png" alt="">
+                    
+                </div>
+                <button class=" absolute bottom-0 right-0 z-[9999]">
+                        <img src="assets/edit-pic-icon.svg" alt="">
+                    </button>
+               </div>
+               </div>
+               <div class=" mt-[24px]">
+                <h5 class="text-[18px] font-medium">General Information</h5>
+                <div class="mt-[20px]">
+                    <div class="flex flex-col gap-[22px]">
+                    <div class="flex gap-[16px]">
+                         <label class="w-full text-[14px] text-[#898989] flex flex-col gap-[4px]" for="">
+                       First Name
+                        <input type="text"  class="w-full bg-[#F3F4F8] text-[#000] rounded-[12px] p-[10px] items-center justify-center gap-[16px]">
+                    </label>
+                         <label class="w-full text-[14px] text-[#898989] flex flex-col gap-[4px]" for="">
+                       Last Name
+                        <input type="text"  class="w-full bg-[#F3F4F8] text-[#000] rounded-[12px] p-[10px] items-center justify-center gap-[16px]">
+                    </label>
+                    </div>
+                    <label class="text-[14px] text-[#898989] flex flex-col gap-[4px]" for="">
+                       Display Name
+                        <input type="text"  class="w-full bg-[#F3F4F8] text-[#000] rounded-[12px] p-[10px] items-center justify-center gap-[16px]">
+                    </label>
+                    <label class="text-[14px] text-[#898989] flex flex-col gap-[4px]" for="">
+                        Email Address
+                        <input type="email"  class="w-full bg-[#F3F4F8] text-[#000] rounded-[12px] p-[10px] items-center justify-center gap-[16px]">
+                    </label>
+                    <div class="flex gap-[16px]">
+                         <label class="w-full max-w-[120px] text-[14px] text-[#898989] flex flex-col gap-[4px]" for="">
+                       Country code
+                        <input type="text"  class="w-full bg-[#F3F4F8] text-[#000] rounded-[12px] p-[10px] items-center justify-center gap-[16px]">
+                    </label>
+                         <label class="w-full text-[14px] text-[#898989] flex flex-col gap-[4px]" for="">
+                       Phone Number
+                        <input type="text"  class="w-full bg-[#F3F4F8] text-[#000] rounded-[12px] p-[10px] items-center justify-center gap-[16px]">
+                    </label>
+                    </div>
+                    <label class="text-[14px] text-[#898989] flex flex-col gap-[4px]" for="">
+                        Bio
+                        <input type="text"  class="w-full  h-[120px] bg-[#F3F4F8] text-[#000] rounded-[12px] p-[10px]  gap-[16px]">
+                    </label>
+                  
+                    <div class="flex gap-[12px] w-full max-w-[400px] ml-auto">
+                        <button class="btn-sec">Discard Change</button>
+                    <button class="btn-pri">Save</button>
+                    </div>
+                   
+                    
+                </div>
+                </div>
+               </div>
+            </div>
+
+            <div class="bg-white w-full rounded-[16px] max-w-[360px] border border-[#D9D9D9] overflow-hidden">
+                <div class="h-[130px] bg-[#55DCFA]"></div>
+                <div class="px-[40px] pb-[40px] max-md:px-[20px] max-md:pb-[20px]">
+                    <img class="w-[90px] h-[90px] rounded-full mx-auto mt-[-50px]" src="assets/user-img.png" alt="">
+                <h5 class="text-[22px] font-semibold text-center">John Doe</h5>
+                <h6 class="text-[#595959] text-center">Aug 23, 2024. India</h6>
+                <p class="text-[14px] text-[#595959] mt-[6px]">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </div>
+            </div>
+            </div>
+          
+          
+          </div>
+        
+
+     
+
+            
+     
+
+
+        </div>
+      </main>
+      <!-- main -->
+    </section>
+
+
+
+
+  </body>
+</html>

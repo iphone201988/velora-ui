@@ -189,3 +189,95 @@
 
 
 
+/* ls */
+
+div#subTable_wrapper {
+    overflow: auto;
+    min-height: calc(100vh - 200px);
+    height: 100%;
+    max-height: calc(100vh - 200px);
+}
+
+.modal.show .modal-dialog {
+    width: 100%;
+    max-width: 1200px;
+}
+
+@media only screen and (max-width: 767px){
+div#subTable_wrapper {
+    max-height: calc(100vh - 120px);
+}
+}
+@media only screen and (max-width: 767px){
+.elementor-4148 .elementor-element.elementor-element-8ef3527 #customer_details .input-text {
+    width: 100%;
+}
+}
+
+.slider-in-two {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.slider-in-two .img-box {
+    position: relative;
+}
+.slider-in-two .img-box .tab.delete{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 888;
+    background-color: #ff5151;
+    color: #fff;
+    border: none;
+}
+
+
+img{width: 100%; height: auto;}
+
+.slider-in-two .img-box {
+    position: relative;
+}
+.slider-in-two .btnn-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+.slider-in-two button.tab img {
+    width: 100%;
+    height: auto;
+    border: none;
+}
+
+.slider-in-two .img-box .tab.delete {
+    position: initial;
+    bottom: 0px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 888;
+    background-color: #ff5151;
+    color: #fff;
+    border: none;
+    font-size: 14px;
+    padding: 8px 16px;
+    font-weight: 400;
+}
+.slider-in-two .img-box .tab.view {
+    position: initial;
+    bottom: 0px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 888;
+    background-color: #00183f;
+    color: #fff;
+    border: none;
+    font-size: 14px;
+    padding: 8px 16px;
+    font-weight: 400;
+}
+
+
